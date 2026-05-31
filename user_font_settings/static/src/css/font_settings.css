@@ -1,0 +1,181 @@
+/* User Font Settings — Odoo 18 */
+
+:root {
+    --ufs-font-family: inherit;
+    --ufs-font-size: 14px;
+    --ufs-line-height: 1.4;
+}
+
+/* ครอบคลุมส่วน backend ที่มักมี font-size เฉพาะของตัวเอง เช่น navbar/sidebar/menu */
+.o_web_client,
+.o_web_client .o_main_navbar,
+.o_web_client .o_menu_systray,
+.o_web_client .o_menu_sections,
+.o_web_client .dropdown-menu,
+.o_web_client .o-dropdown--menu,
+.o_web_client .o_control_panel,
+.o_web_client .breadcrumb,
+.o_web_client .o_action_manager,
+.o_web_client .o_content,
+.o_web_client .o_content *,
+.o_web_client .o_form_view,
+.o_web_client .o_field_widget,
+.o_web_client .o_field_widget *,
+.o_web_client .o_cell,
+.o_web_client .o_cell *,
+.o_web_client .o_wrap_label,
+.o_web_client .text-break,
+.o_web_client .text-900,
+.o_web_client .o_list_renderer,
+.o_web_client .o_kanban_renderer,
+.o_web_client .o_searchview,
+.o_web_client .o-mail-DiscussSidebar,
+.o_web_client .o-mail-Discuss-content {
+    font-family: var(--ufs-font-family, inherit);
+    font-size: var(--ufs-font-size, inherit) !important;
+    line-height: var(--ufs-line-height, normal);
+}
+
+/* อย่าทับ font-family ของ Font Awesome icons */
+.o_web_client .fa,
+.o_web_client [class*=" fa-"],
+.o_web_client [class^="fa-"] {
+    font-family: FontAwesome !important;
+    font-size: inherit !important;
+    line-height: 1;
+}
+
+/* อย่าทับ font-family ของ Odoo UI icons เช่น oi-search */
+.o_web_client .oi,
+.o_web_client [class*=" oi-"],
+.o_web_client [class^="oi-"] {
+    font-family: odoo_ui_icons !important;
+    font-size: inherit !important;
+    line-height: 1;
+}
+
+/* ปุ่ม save/cancel ด้านบนของฟอร์มควรโตตาม font ที่ผู้ใช้ตั้ง */
+.o_web_client .o_form_status_indicator_buttons .btn,
+.o_web_client .o_form_status_indicator_buttons .fa {
+    font-size: calc(var(--ufs-font-size, 14px) + 2px) !important;
+}
+
+.o_web_client .o_form_status_indicator_buttons .btn {
+    line-height: 1.1;
+}
+
+.o_web_client .o_form_status_indicator_buttons .fa-cloud-upload {
+    font-size: calc(var(--ufs-font-size, 14px) + 11px) !important;
+    color: #009bb3 !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.o_web_client .o_form_status_indicator_buttons .fa-times.fa-fw {
+    font-size: calc(var(--ufs-font-size, 14px) + 11px) !important;
+    color: #dc3545 !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+.o_web_client .o_form_status_indicator_buttons .o_form_button_save:hover .fa-cloud-upload {
+    color: #007f92 !important;
+}
+
+.o_web_client .o_form_status_indicator_buttons .o_form_button_cancel:hover .fa-times.fa-fw {
+    color: #b02a37 !important;
+}
+
+/* ปุ่มใน form button box เช่น Print Report */
+.o_web_client .o_form_view .o_form_buttonbox .oe_stat_button,
+.o_web_client .o_form_view .o_form_buttonbox .oe_stat_button span {
+    font-size: var(--ufs-font-size, 14px) !important;
+}
+
+.o_web_client .o_form_view .o_form_buttonbox .oe_stat_button .o_button_icon,
+.o_web_client .o_form_view .o_form_buttonbox .oe_stat_button .fa-print {
+    font-size: calc(var(--ufs-font-size, 14px) + 2px) !important;
+}
+
+.o_web_client .o_form_view .o_form_buttonbox .oe_stat_button {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--ufs-font-size, 14px) * 0.35);
+    min-height: calc(var(--ufs-font-size, 14px) + 18px);
+    padding: calc(var(--ufs-font-size, 14px) * 0.35) calc(var(--ufs-font-size, 14px) * 0.75);
+    line-height: var(--ufs-line-height, 1.4);
+}
+ 
+
+ 
+
+ 
+@media screen and (min-width: 700px)   {
+    .mk_apps_sidebar_panel {
+        width: clamp(210px, calc(var(--ufs-font-size, 14px) * 14), 250px);
+        max-width: min(40vw, 250px);
+    }
+}
+ 
+
+
+/* ── ปุ่มใน systray ─────────────────────────── */
+.o_font_size_systray {
+    gap: 0;
+    height: 100%;
+    padding: 0 4px;
+}
+
+.o_font_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--o-navbar-icon-color, #ffffff);
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background .15s, color .15s;
+    user-select: none;
+    line-height: 1;
+}
+
+.o_font_btn:hover {
+    background: rgba(0,0,0,.06);
+    color: var(--o-brand-primary, #017e84);
+    text-decoration: none;
+}
+
+.o_font_btn:active {
+    background: rgba(0,0,0,.12);
+}
+
+/* คั่นระหว่างปุ่มลดและเพิ่ม */
+.o_font_btn_minus { border-right: 1px solid rgba(0,0,0,.1); }
+
+/* ── Toast ──────────────────────────────────── */
+.o_font_toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1e293b;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 6px 20px rgba(0,0,0,.22);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    animation: ufs-in .22s ease-out;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes ufs-in  { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+@keyframes ufs-out { from { opacity:1; transform:none; } to { opacity:0; transform:translateY(8px); } }
+.o_font_toast.ufs-hiding { animation: ufs-out .22s ease-in forwards; }

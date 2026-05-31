@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="res_config_settings_view_form_user_font_settings" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.user.font.settings</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="90" />
+    <field name="inherit_id" ref="base.res_config_settings_view_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="inside">
+        <app string="User Font Settings"
+             data-string="User Font Settings"
+             name="user_font_settings"
+             groups="base.group_system"
+             logo="/user_font_settings/static/description/font_settings_logo.svg">
+          <block title="Font Display" name="user_font_settings_container">
+            <setting
+              string="Default Font Display"
+              help="Set default font display values that new users and users without personal preferences will use."
+            >
+              <group  >
+                <label for="font_default_family" class="o_light_label" />
+                <field name="font_default_family" />
+              </group>
+              <group  >
+                <label for="font_default_size" class="o_light_label" />
+                <field name="font_default_size" />
+              </group>
+              <group  >
+                <label for="font_default_line_height" class="o_light_label" />
+                <field name="font_default_line_height" />
+              </group>
+            </setting>
+          </block>
+        </app>
+      </xpath>
+    </field>
+  </record>
+</odoo>
