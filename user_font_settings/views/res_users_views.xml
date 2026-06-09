@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Odoo 18: view_users_form_simple_modif มี structure:
+          <form>
+            <notebook>
+              <page name="preferences_page">
+                <group name="preferences">  ← inject ที่นี่
+    -->
+    <record id="view_users_form_font_settings" model="ir.ui.view">
+        <field name="name">res.users.form.font.settings</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='preferences_page']" position="inside">
+                <group name="font_settings_group" string="ตั้งค่าการแสดงผลฟอนต์">
+                    <group>
+                        <field name="font_family"/>
+                        <field name="font_size"/>
+                        <field name="font_line_height"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
