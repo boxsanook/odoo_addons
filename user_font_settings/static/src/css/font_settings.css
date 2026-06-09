@@ -114,6 +114,15 @@
         max-width: min(40vw, 250px);
     }
 }
+
+/* sidebar app name ของ mk_apps_sidebar ต้องปรับตามค่าฟอนต์ผู้ใช้ */
+.o_web_client .mk_apps_sidebar_panel,
+.o_web_client .mk_apps_sidebar_panel .mk_apps_sidebar_name,
+.o_web_client .mk_apps_sidebar_panel .mk_apps_sidebar_name * {
+    font-family: var(--ufs-font-family, inherit) !important;
+    font-size: var(--ufs-font-size, 14px) !important;
+    line-height: var(--ufs-line-height, 1.4) !important;
+}
  
 
 

@@ -5,6 +5,7 @@
     'summary': 'ปุ่ม ก-/ก+ ใน systray navbar — เปลี่ยน font size บันทึกต่อ user',
     'category': 'Tools',
     'author':   'Anulak Ch.',
+    'website':  'https://github.com/boxsanook',
     'depends':  ['web', 'base'],
     'data': [
         'security/ir.model.access.csv',
